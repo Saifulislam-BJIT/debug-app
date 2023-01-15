@@ -20,6 +20,11 @@ class BFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_b, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        Log.d("TAG", "onViewCreated: B Fragment")
+    }
+
     override fun onPause() {
         super.onPause()
         Log.d("TAG", "onPause: B Fragment")
@@ -33,5 +38,15 @@ class BFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         Log.d("TAG", "onDestroyView: B Fragment")
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d("TAG", "onStart: B Fragment")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("TAG", "onStop: B Fragment")
     }
 }

@@ -19,6 +19,11 @@ class AFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_a, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        Log.d("TAG", "onViewCreated: A Fragment")
+    }
+
     override fun onPause() {
         super.onPause()
         Log.d("TAG", "onPause: A Fragment")
@@ -32,5 +37,15 @@ class AFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         Log.d("TAG", "onDestroyView: A Fragment")
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d("TAG", "onStart: A Fragment")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("TAG", "onStop: A Fragment")
     }
 }
